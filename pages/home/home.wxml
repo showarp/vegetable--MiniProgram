@@ -1,0 +1,11 @@
+<view id="bd">
+<navigator  url="/pages/idtf/idtf?title=navigate" class="option" style="width: 100vw;">
+  <image src="./Images/photo.png" style="width:300rpx; height:300rpx;"></image>
+  <text style='color:#808080;'>拍照识别</text>
+</navigator>
+  <view class="hr"></view>
+  <navigator url="/pages/batchidtf/batchidtf" class="option" style="width: 100vw;">
+    <image src="./Images/upload.png" style="width:250rpx; height:250rpx;"></image>
+    <text style='color:#808080;margin-top: 30rpx;'>批量识别</text>
+  </navigator>
+</view>

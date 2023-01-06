@@ -1,0 +1,33 @@
+/* pages/phptores/photores.wxss */
+.main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  background:#FCFFE6;
+}
+.res{
+  height: 100vh;
+  width: 100vw;
+  border-radius: 20px;
+}
+.imageres{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.textitem{
+  margin-top: 30px;
+}
+.title{
+  position: absolute;
+  top:9%;
+  left:15%;
+  font-size: 50rpx;
+  color: rgb(83, 83, 83);
+  font-weight: bold;
+}

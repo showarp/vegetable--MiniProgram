@@ -1,0 +1,18 @@
+<view class="main">
+  <swiper class="imgres" indicator-dots="{{true}}" 	next-margin="80rpx" 	previous-margin="80rpx">
+    <swiper-item wx:for="{{resImageres}}" wx:key="unique" style="display: flex;">
+      <navigator url="/pages/photores/photores?imageurl=http://{{fileurl}}/{{item.imageres}}&posix={{posix}}&posiy={{posiy}}&qua={{item.qua}}&class={{item.class}}&idx={{index}}" style="margin:auto;">
+        <image src="{{'http://'+fileurl+'/'+item.imageres}}" style="height: 70vh; width: 70vw; border-radius: 15px; box-shadow: 0 0 10px 1px rgb(139, 139, 139);" bindtap="imageclick" mode="widthFix">
+      {{item}}
+      </image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <view class='imageupld' style="margin-bottom: {{10}}px;"bindtap="upld">
+    <view wx:if="{{!tfupld}}" style="margin:auto; color: rgb(0, 0, 0); font-weight: bold;" >点击上传图片</view>
+  </view>
+</view>
+<mp-dialog title="识别结果" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+        <view>检测到图片中没有果蔬</view>
+</mp-dialog>
+<topbar prop-t='t' prop-title='批量上传'></topbar>

@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/home/home",
+    "components/topbar/topbar",
+    "pages/logs/logs",
+    "pages/idtf/idtf",
+    "pages/photores/photores",
+    "pages/batchidtf/batchidtf",
+    "pages/vdo/vdo"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位蔬菜位置信息"
+    }
+  }
+}

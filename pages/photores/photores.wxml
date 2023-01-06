@@ -1,0 +1,33 @@
+<!--pages/phptores/photores.wxml-->
+<view class="main">
+  <swiper class="res" indicator-dots="{{true}}">
+    <swiper-item class="imageres">
+      <view class="title">结果</view>
+      <image src="{{imageurl}}" mode="widthFix"style="width:70vw;border-radius: 15px;" bindtap="imageclick">
+      </image>
+    </swiper-item>
+    <swiper-item wx:for="{{class}}" wx:key="unique" class="imageres">
+      <view class="title">数据</view>
+      <view style="background-color: white;height: 70vh; width: 75vw; border-radius: 15px; box-shadow: 1px 1px 10px rgb(136, 136, 136); overflow: hidden;">
+        <mp-cells ext-class="my-cells" footer="id:{{id}}">
+          <mp-cell value="品种" footer="{{class[index]}}"></mp-cell>
+          <mp-cell value="成熟果蔬数" footer="{{qua[index]}}个"></mp-cell>
+          <mp-cell value="地址" footer="{{address}}"></mp-cell>
+        </mp-cells>
+      </view>
+    </swiper-item>
+    <swiper-item class="imageres" catchtouchmove="{{catchtouchmove}}">
+      <view class="title">位置</view>
+      <view style="height: {{mapmaskScale}}vh; width: {{mapmaskScale}}vw;overflow: hidden;border-radius: 15px;transition: all .5s; display: flex;">
+        <map id="myMap" style="height: 100vh; width: 100vw; margin:autp;" longitude="{{posix}}" latitude="{{posiy}}" markers="{{marker}}">
+        </map>
+        <view wx:if="{{mapmask}}" bindtap="mapmaskclick" style="height: 70vh; width: 70vw;position: absolute;transform: translate(-50%,-50%);top: 50%;left: 50%; ">
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+<mp-actionSheet bindactiontap="btnClick" show="{{operation}}" actions="{{groups}}" title="是否保存到蔬果数据库？">
+</mp-actionSheet>
+<topbar wx:if="{{topbar}}" prop-t='t' prop-title='识别结果' bindtap="back"></topbar>
+<image wx:if="{{!topbar}}" src="./images/minmap.png" style="position: absolute; top: {{wxBarposi.top}}px;left: 20rpx; width:{{wxBarposi.height}}px;height:{{wxBarposi.height}}px;" bindtap="maphideclick"></image>

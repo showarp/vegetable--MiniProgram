@@ -1,0 +1,14 @@
+<!--pages/idtf/idtf.wxml-->
+<view class="main">
+  <camera device-position="back" resolution='high' flash="off" binderror="error" style="width: 100vw; height: 100vh;"></camera>
+  <image src="{{photoSrc}}" class="photoRes"></image>
+  <view class='shutter' bindtap="takePhoto"></view>
+</view>
+<view wx:if="{{ld}}" class="loading">
+  <image src="/pages/idtf/images/loading.png" style="width:150rpx; height: 150rpx;" class="loadingicon"></image>
+  <text class='ldtxt'>识别中...</text>
+</view>
+<topbar prop-t='f' prop-title='拍照识别'></topbar>
+<mp-dialog title="识别结果" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+        <view>检测到图片中没有果蔬</view>
+</mp-dialog>

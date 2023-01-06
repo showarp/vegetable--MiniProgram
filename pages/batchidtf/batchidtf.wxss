@@ -1,0 +1,38 @@
+/* pages/batchidtf/batchidtf.wxss */
+.main{
+  height: 100vh;
+  width: 100vw;
+  background:#FCFFE6;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.upld{
+background: white;
+padding: 10px;
+box-shadow: 0 0 10px 0px black;
+width: 90vw;
+border-radius: 10px;
+margin:0 auto;
+margin-bottom: 60rpx;
+}
+.imageupld{
+  display: flex;
+  background:#c0daa3;
+  padding: 10px;
+  border-radius: 10px;
+  margin:0 auto;
+  width: 90vw;
+  box-shadow: 0 0 10px 0px #365236;
+}
+.isnull{
+  margin-top: 400rpx;
+  text-align: center;
+  color: rgb(185, 204, 174);
+  font-weight: bold;
+  font-size: 150rpx;
+}
+.imgres{
+  display: flex;
+  flex: 1;
+}

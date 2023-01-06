@@ -1,0 +1,9 @@
+/* components/topbar/topbar.wxss */
+.contianer{
+  position: absolute;
+  left: 0px;
+  width: 100vw;
+}
+.t{
+  display: flex;
+}

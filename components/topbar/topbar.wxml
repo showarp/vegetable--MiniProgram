@@ -1,0 +1,13 @@
+<!--components/topbar/topbar.wxml-->
+<view 
+  class="contianer"
+  style="height:{{posi.height-1}}px; top: {{posi.top}}px;">
+  <view wx:if="{{propT=='t'}}" class="t">
+    <mp-icon type="field" icon="back" color="black" size="{{16}}" style="margin:0 20rpx;" bindtap="back"></mp-icon>
+    <view style="line-height: {{posi.height-1}}px;">{{propTitle}}</view>
+  </view>
+  <view wx:if="{{propT!='t'}}" class="t">
+    <mp-icon type="field" icon="back" color="white" size="{{16}}" style="margin:0 20rpx;" bindtap="back"></mp-icon>
+    <view style="line-height: {{posi.height-1}}px; color: white;">{{propTitle}}</view>
+  </view>
+</view>

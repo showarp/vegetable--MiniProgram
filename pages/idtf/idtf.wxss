@@ -1,0 +1,55 @@
+/* pages/idtf/idtf.wxss */
+.main{
+  height: 100vh;
+  width: 100vw;
+  
+}
+camera{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.photoRes{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+.shutter{
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 100%;
+  height:150rpx;
+  width: 150rpx;
+}
+.loading{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+@keyframes ld{
+  0%{
+  transform: rotate(0turn);
+  }
+  100%{
+  transform: rotate(1turn);
+  }
+}
+.loadingicon{
+  transform: rotate(0turn);
+  animation: ld 1s linear infinite;
+}
+.ldtxt{
+  color: white;
+}

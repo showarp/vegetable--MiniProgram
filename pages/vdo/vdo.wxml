@@ -1,0 +1,3 @@
+<!--pages/vdo/vdo.wxml-->
+<camera frame-size="small" device-position="back" resolution='high' flash="off" binderror="error" style="width: 100vw; height: 100vh;"></camera>
+<canvas type="2d" id="myCanvas"></canvas>
